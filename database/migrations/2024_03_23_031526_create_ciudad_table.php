@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('ciudad', 150);
             $table->unsignedInteger('id_estado');
-            $table->foreign('id_estado')->references('id_estado')->on('estado');
+            $table->foreign('id_estado')->references('id')->on('estado');
             $table->timestamps();
         });
     }
