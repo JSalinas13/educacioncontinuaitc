@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        
+        Schema::create('localidad', function (Blueprint $table) {
+            $table->id();
+            $table->string('localidad', 150);
+            $table->unsignedInteger('id_ciudad');
+            $table->foreign('id_ciudad')->references('id')->on('ciudad');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('localidad');
     }
 };
