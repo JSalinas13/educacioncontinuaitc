@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('area', function (Blueprint $table) {
+        Schema::create('usuariorol', function (Blueprint $table) {
             $table->id();
-            $table->string('area', 50);
+            $table->unsignedBigInteger('usuario_id');
+            $table->unsignedBigInteger('rol_id');
+            $table->foreign('usuario_id')->references('id')->on('usuario');
+            $table->foreign('rol_id')->references('id')->on('rol');
+            $table->primary(['usuario_id', 'rol_id']);
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('area');
+        Schema::dropIfExists('usuariorol');
     }
 };
