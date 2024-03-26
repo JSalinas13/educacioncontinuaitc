@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('ciudad', function (Blueprint $table) {
             $table->id();
             $table->string('ciudad', 150);
-            $table->unsignedInteger('id_estado');
-            $table->foreign('id_estado')->references('id')->on('estado');
+            $table->unsignedBigInteger('estado_id');
+
+            $table->foreign('estado_id')->references('id')->on('estado');
             $table->timestamps();
         });
     }

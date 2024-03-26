@@ -23,7 +23,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tipo_id');
             $table->unsignedBigInteger('instructor_id');
 
-            $table->foreign('tipo_id')->references('id')->on('tipo');
+            $table->foreign('tipo_id')->references('id')->on('tipocurso');
             $table->foreign('instructor_id')->references('id')->on('usuario');
 
             $table->timestamps();
@@ -38,3 +38,6 @@ return new class extends Migration
         Schema::dropIfExists('curso');
     }
 };
+
+
+

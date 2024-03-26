@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('localidad', function (Blueprint $table) {
             $table->id();
             $table->string('localidad', 150);
-            $table->unsignedInteger('id_ciudad');
-            $table->foreign('id_ciudad')->references('id')->on('ciudad');
+            $table->unsignedBigInteger('ciudad_id');
+            $table->foreign('ciudad_id')->references('id')->on('ciudad');
             $table->timestamps();
         });
     }

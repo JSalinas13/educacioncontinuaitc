@@ -19,7 +19,8 @@ return new class extends Migration
             $table->foreign('curso_id')->references('id')->on('curso');
             $table->foreign('estudiante_id')->references('id')->on('usuario');
             $table->foreign('comentario_id')->references('id')->on('comentario');
-            $table->primary(['curso_id', 'estudiante_id']);
+
+            $table->primary(['curso_id', 'estudiante_id', 'comentario_id']);
             $table->timestamps();
         });
     }
