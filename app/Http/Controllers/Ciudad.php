@@ -7,4 +7,6 @@ use Illuminate\Http\Request;
 class Ciudad extends Controller
 {
     //
+
+
 }

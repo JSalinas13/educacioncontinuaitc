@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 250);
             $table->string('apellido_paterno', 250);
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('usuario', 18);
             $table->string('contrasena', 32);
             $table->unsignedBigInteger('localidad_id');
-            $table->foreign('localidad_id')->references('id')->on('localidad');
+            $table->foreign('localidad_id')->references('id')->on('localidades');
             $table->timestamps();
         });
     }
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('usuarios');
     }
 };

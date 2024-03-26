@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cursocomentario', function (Blueprint $table) {
+        Schema::create('cursoscomentarios', function (Blueprint $table) {
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('estudiante_id');
             $table->unsignedBigInteger('comentario_id');
 
-            $table->foreign('curso_id')->references('id')->on('curso');
-            $table->foreign('estudiante_id')->references('id')->on('usuario');
-            $table->foreign('comentario_id')->references('id')->on('comentario');
+            $table->foreign('curso_id')->references('id')->on('cursos');
+            $table->foreign('estudiante_id')->references('id')->on('usuarios');
+            $table->foreign('comentario_id')->references('id')->on('comentarios');
 
             $table->primary(['curso_id', 'estudiante_id', 'comentario_id']);
             $table->timestamps();
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cursocomentario');
+        Schema::dropIfExists('cursoscomentarios');
     }
 };
