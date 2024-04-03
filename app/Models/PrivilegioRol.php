@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PrivilegioRol extends Model
 {
+    protected $table = 'privilegiosroles';
     use HasFactory;
 }
