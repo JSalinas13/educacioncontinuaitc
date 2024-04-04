@@ -8301,6 +8301,14 @@ fieldset:disabled .btn {
     color: #06BBCC !important
 }
 
+.text-color {
+    color: #688B58 !important
+}
+
+.text-blue {
+    color: #13315C !important
+}
+
 .text-secondary {
     color: #6c757d !important
 }
@@ -8379,6 +8387,14 @@ fieldset:disabled .btn {
 
 .bg-light {
     background-color: #F0FBFC !important
+}
+
+.bg-light2 {
+    background-color: #D4F4DC!important
+}
+
+.bg-light3 {
+    background-color: #AFE3C0!important
 }
 
 .bg-dark {
