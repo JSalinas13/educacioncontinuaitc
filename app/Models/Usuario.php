@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -19,11 +20,11 @@ class Usuario extends Model
     {
         return $this->belongsToMany(Contacto::class, 'contactosusuarios', 'usuario_id', 'contacto_id');
     }
-    public function localidad()
+    public function localidad(): BelongsTo
     {
         return $this->belongsTo(Localidad::class);
     }
-    public function curso()
+    public function curso():HasMany
     {
         return $this->hasMany(Curso::class);
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -11,11 +12,11 @@ class Curso extends Model
 {
     protected $table = 'cursos';
     use HasFactory;
-    public function usuario()
+    public function usuario(): BelongsTo
     {
         return $this->belongsTo(Usuario::class);
     }
-    public function tipoCurso()
+    public function tipoCurso(): BelongsTo
     {
         return $this->belongsTo(TipoCurso::class);
     }
@@ -23,7 +24,7 @@ class Curso extends Model
     {
         return $this->belongsToMany(Usuario::class, 'cursosestudiantes', 'curso_id', 'estudiante_id');
     }
-    public function programas()
+    public function programas():HasMany
     {
         return $this->hasMany(Programa::class);
     }
