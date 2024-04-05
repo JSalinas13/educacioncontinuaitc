@@ -24,7 +24,7 @@ class Curso extends Model
     {
         return $this->belongsToMany(Usuario::class, 'cursosestudiantes', 'curso_id', 'estudiante_id');
     }
-    public function programas():HasMany
+    public function programas(): HasMany
     {
         return $this->hasMany(Programa::class);
     }

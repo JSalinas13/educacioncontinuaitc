@@ -10,7 +10,7 @@ class Estado extends Model
 {
     protected $table = 'estados';
     use HasFactory;
-    public function ciudades():HasMany
+    public function ciudades(): HasMany
     {
         return $this->hasMany(Ciudad::class);
     }

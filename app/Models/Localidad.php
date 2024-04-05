@@ -15,7 +15,7 @@ class Localidad extends Model
     {
         return $this->belongsTo(Ciudad::class);
     }
-    public function usuario():HasMany
+    public function usuario(): HasMany
     {
         return $this->hasMany(Usuario::class);
     }

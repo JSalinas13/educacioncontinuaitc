@@ -16,7 +16,7 @@ class Ciudad extends Model
     {
         return $this->belongsTo(Estado::class);
     }
-    public function localidad() :HasMany
+    public function localidad(): HasMany
     {
         return $this->hasMany(Localidad::class);
     }

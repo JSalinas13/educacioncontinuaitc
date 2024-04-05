@@ -10,7 +10,7 @@ class Programa extends Model
 {
     protected $table = 'programas';
     use HasFactory;
-    public function curso():BelongsTo
+    public function curso(): BelongsTo
     {
         return $this->belongsTo(Curso::class, 'curso_id');
     }

@@ -11,7 +11,7 @@ class Area extends Model
     protected $table = 'areas';
 
     use HasFactory;
-    public function tipoCursos():HasMany
+    public function tipoCursos(): HasMany
     {
         return $this->hasMany(TipoCurso::class);
     }

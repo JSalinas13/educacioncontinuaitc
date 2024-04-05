@@ -24,7 +24,7 @@ class Usuario extends Model
     {
         return $this->belongsTo(Localidad::class);
     }
-    public function curso():HasMany
+    public function curso(): HasMany
     {
         return $this->hasMany(Curso::class);
     }

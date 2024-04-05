@@ -21,7 +21,7 @@ class CursoComentario extends Model
         return $this->belongsTo(Curso::class, 'curso_id');
     }
 
-    public function comentario():BelongsTo
+    public function comentario(): BelongsTo
     {
         return $this->belongsTo(Comentario::class, 'comentario_id');
     }
