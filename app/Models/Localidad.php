@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Localidad extends Model
 {
-    protected $table = 'tiposcursos';
+    protected $table = 'localidades';
     use HasFactory;
     public function ciudad()
     {

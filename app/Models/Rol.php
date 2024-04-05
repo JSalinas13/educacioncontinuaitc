@@ -14,7 +14,7 @@ class Rol extends Model
     use HasFactory;
     public function privilegioRol(): belongsToMany
     {
-        return $this->belongsToMany(Privilegio::class,'privilegiosroles','rol_id','privilegio_id');
+        return $this->belongsToMany(Privilegio::class, 'privilegiosroles', 'rol_id', 'privilegio_id');
     }
     public function usuarioRol(): BelongsToMany
     {

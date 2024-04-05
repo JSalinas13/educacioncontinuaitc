@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TipoCurso extends Model
 {
-    protected $table = 'tiposcursos'; // Especifica el nombre de la tabla
-
+    protected $table = 'tiposcursos';
+    
     use HasFactory;
 
     public function area(): BelongsTo
