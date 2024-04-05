@@ -23,7 +23,7 @@ class Curso extends Model
     {
         return $this->belongsToMany(Usuario::class, 'cursosestudiantes', 'curso_id', 'estudiante_id');
     }
-    public function programa()
+    public function programas()
     {
         return $this->hasMany(Programa::class);
     }
