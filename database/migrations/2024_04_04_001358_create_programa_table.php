@@ -9,12 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('estados', function (Blueprint $table) {
+        Schema::create('programas', function (Blueprint $table) {
             $table->id();
-            $table->string('estado', 150);
-            $table->string('pais', 250);
+            $table->string('descripcion', 250);
+            $table->unsignedBigInteger('curso_id');
+
+            $table->foreign('curso_id')->references('id')->on('cursos');
+            $table->timestamps();
         });
     }
 
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('estados');
+        Schema::dropIfExists('programa');
     }
 };
