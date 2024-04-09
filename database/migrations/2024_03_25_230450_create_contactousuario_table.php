@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('contactosusuarios', function (Blueprint $table) {
             $table->unsignedBigInteger('usuario_id');
-            $table->unsignedBigInteger('contacto_id')->unique();
+            $table->unsignedBigInteger('contacto_id')->unique()->nullable(false)->change();
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->foreign('contacto_id')->references('id')->on('contactos');
             $table->primary(['usuario_id', 'contacto_id']);

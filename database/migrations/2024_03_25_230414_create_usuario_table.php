@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('correo', 200)->unique()->nullable(false);
             $table->string('curp', 18)->unique()->nullable(false);
             $table->text('imagen');
-            $table->string('rfc', 13)->unique();
+            $table->string('rfc', 13)->unique()->nullable(false)->change();
             $table->text('expreriencia');
             $table->string('sexo', 1)->nullable(false);
             $table->text('discapacidades');
