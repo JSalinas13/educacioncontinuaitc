@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('nombre', 250);
             $table->string('apellido_paterno', 250);
             $table->string('apellido_materno', 250);
-            $table->string('correo', 200);
+            $table->string('correo', 200)->unique();
             $table->string('curp', 18)->unique();
             $table->text('imagen');
-            $table->string('rfc', 13);
+            $table->string('rfc', 13)->unique();
             $table->text('expreriencia');
             $table->string('sexo', 1);
             $table->text('discapacidades');
