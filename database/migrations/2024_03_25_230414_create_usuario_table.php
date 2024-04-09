@@ -13,19 +13,19 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 250);
-            $table->string('apellido_paterno', 250);
-            $table->string('apellido_materno', 250);
-            $table->string('correo', 200)->unique();
-            $table->string('curp', 18)->unique();
+            $table->string('nombre', 250)->nullable(false)->change();
+            $table->string('apellido_paterno', 250)->nullable(false)->change();
+            $table->string('apellido_materno', 250)->nullable(false)->change();
+            $table->string('correo', 200)->unique()->nullable(false)->change();
+            $table->string('curp', 18)->unique()->nullable(false)->change();
             $table->text('imagen');
-            $table->string('rfc', 13)->unique();
+            $table->string('rfc', 13)->unique()->nullable(false)->change();
             $table->text('expreriencia');
-            $table->string('sexo', 1);
+            $table->string('sexo', 1)->nullable(false)->change();
             $table->text('discapacidades');
             $table->text('alergias');
-            $table->string('usuario', 18);
-            $table->string('contrasena', 32);
+            $table->string('usuario', 18)->nullable(false)->change();
+            $table->string('contrasena', 32)->nullable(false)->change();
             $table->unsignedBigInteger('localidad_id');
             $table->foreign('localidad_id')->references('id')->on('localidades');
             $table->timestamps();
