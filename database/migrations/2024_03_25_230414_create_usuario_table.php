@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nombre', 250)->nullable(false)->change();
             $table->string('apellido_paterno', 250)->nullable(false)->change();
             $table->string('apellido_materno', 250)->nullable(false)->change();
-            $table->string('correo', 200)->unique()->nullable(false)->change();
-            $table->string('curp', 18)->unique()->nullable(false)->change();
+            $table->string('correo', 200)->unique()->nullable(false);
+            $table->string('curp', 18)->unique()->nullable(false);
             $table->text('imagen');
             $table->string('rfc', 13)->unique();
             $table->text('expreriencia');
