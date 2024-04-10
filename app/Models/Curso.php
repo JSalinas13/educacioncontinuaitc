@@ -28,8 +28,8 @@ class Curso extends Model
     {
         return $this->hasMany(Programa::class);
     }
-    public function cursoComentario(): HasMany
+    public function cursoComentario(): BelongsToMany
     {
-        return $this->hasMany(CursoComentario::class, 'curso_id');
+        return $this->belongsToMany(Comentario::class, 'cursoscomentarios', 'curso_id', 'comentario_id');
     }
 }

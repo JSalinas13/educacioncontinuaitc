@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('comentario', 250);
             $table->date('fecha_comento');
+            $table->unsignedBigInteger('usuario_id');
+
+            $table->foreign('estado_id')->references('id')->on('usuario');
             $table->timestamps();
         });
     }
