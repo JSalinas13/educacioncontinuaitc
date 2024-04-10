@@ -43,3 +43,11 @@ Route::get('/testimonial', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/learning', function () {
+    return view('learning');
+});
+
+Route::get('/learningCourses', function () {
+    return view('learningCourses');
+});
