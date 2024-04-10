@@ -32,8 +32,9 @@ class Usuario extends Model
     {
         return $this->belongsToMany(Curso::class, 'cursosestudiantes', 'estudiante_id', 'curso_id');
     }
-    public function cursoComentario(): HasMany
+
+    public function comentario():HasMany
     {
-        return $this->hasMany(CursoComentario::class, 'usuario_id');
+        return $this->hasMany(Comentario::class);
     }
 }
