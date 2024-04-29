@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\CiudadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,9 @@ Route::post('/estado', [EstadoController::class, 'store']); //nuevo estado
 Route::put('/estado/{id}', [EstadoController::class, 'update']); //actualiza un estado por su ID
 Route::delete('/estado/{id}', [EstadoController::class, 'destroy']); //elimina un estado por su ID
 
+//CIUDAD
+Route::get('/ciudad', [CiudadController::class, 'index']); //lista todas las ciudades
+Route::get('/ciudad/{id}', [CiudadController::class, 'show']); //muestra una ciudad
+Route::post('/ciudad', [CiudadController::class, 'store']); //nueva ciudad
+Route::put('/ciudad/{id}', [CiudadController::class, 'update']); //actualiza una ciudad por su ID
+Route::delete('/ciudad/{id}', [CiudadController::class, 'destroy']); //elimina una ciudad por su ID
