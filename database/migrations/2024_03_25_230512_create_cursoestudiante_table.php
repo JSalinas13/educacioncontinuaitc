@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('cursosestudiantes', function (Blueprint $table) {
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('estudiante_id');
-            $table->boolean('estatus_pago')->nullable(false)->change();
+            $table->boolean('estatus_pago')->nullable(false);
             $table->decimal('calificacion', 10, 2);
 
             $table->foreign('curso_id')->references('id')->on('cursos');
