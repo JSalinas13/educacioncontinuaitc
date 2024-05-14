@@ -54,6 +54,11 @@ Route::get('/learningCourses', function () {
     return view('learningCourses');
 });
 
+Route::get('/detailCourses', function () {
+    return view('detailCourses');
+});
+
+
 Route::get('/login', function () {
     return view('login.login');
 })->name('login');
