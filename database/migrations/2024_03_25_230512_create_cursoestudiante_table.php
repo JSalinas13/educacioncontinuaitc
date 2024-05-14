@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cursosestudiantes', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('estudiante_id');
             $table->boolean('estatus_pago')->nullable(false);
@@ -19,7 +20,7 @@ return new class extends Migration
 
             $table->foreign('curso_id')->references('id')->on('cursos');
             $table->foreign('estudiante_id')->references('id')->on('usuarios');
-            $table->primary(['curso_id', 'estudiante_id']);
+            // $table->primary(['curso_id', 'estudiante_id']);
             $table->timestamps();
         });
     }

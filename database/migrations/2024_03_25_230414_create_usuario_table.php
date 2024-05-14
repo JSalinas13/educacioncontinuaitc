@@ -26,7 +26,8 @@ return new class extends Migration
             $table->text('alergias');
             $table->string('usuario', 18)->nullable(false);
             $table->string('contrasena', 32)->nullable(false);
-            $table->unsignedBigInteger('localidad_id');
+            #De manera temporal
+            $table->unsignedBigInteger('localidad_id')->nullable();
             $table->foreign('localidad_id')->references('id')->on('localidades');
             $table->timestamps();
         });
