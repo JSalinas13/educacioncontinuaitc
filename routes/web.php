@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cursos\CursosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuario\MisCursosController;
 
@@ -59,4 +60,12 @@ Route::get('/login', function () {
 
 Route::group(['prefix' => 'usuario'],function () {
     Route::get('/MisCursos', [MisCursosController::class,'index'])->name('usuario.mis.cursos');
+
 });
+
+
+Route::group(['prefix' => 'cursos'],function () {
+    Route::get('/', [CursosController::class,'index'])->name('cursos');
+
+});
+

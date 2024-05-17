@@ -1,6 +1,28 @@
 @extends('layout/template3')
-@section('name', 'Prueba')
+@section('name', 'Mis cursos')
+@section('imagen','https://wallpaper.forfun.com/fetch/04/048b44ed88eea709856dd1013a69c11b.jpeg')
 @section('content')
+<style>
+    .curso-card {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        background-color: #ffffff;
+    }
+
+    .curso-card:hover {
+        transform: scale(1.1);
+        background-color: #dff96b;
+    }
+
+    .curso-card2 {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        background-color: #ffffff;
+    }
+
+    .curso-card2:hover {
+        transform: scale(1.1);
+        background-color: #fd887f;
+    }
+    </style>
     <div class="container">
         <div class="row mb-5">
             <h2 class="mt-3"><i class="fa fa-address-book" aria-hidden="true"></i> Mis cursos</h2>
@@ -10,7 +32,7 @@
             <div class="row">
                 @foreach ($data['MisCursos'] as $curso)
                     <div class="col-sm-4">
-                        <div class="card border-info mb-3">
+                        <div class="card border-info mb-3 curso-card">
                             <img src="{{ $curso->imagen }}" class="card-img-top" alt="{{ $curso->nombre_curso }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $curso->nombre_curso }}</h5>
@@ -49,7 +71,7 @@
             <div class="row">
                 @foreach ($data['MisCursosAPagar'] as $curso)
                     <div class="col-sm-4">
-                        <div class="card border-info mb-3">
+                        <div class="card border-info mb-3 curso-card2">
                             <img src="{{ $curso->imagen }}" class="card-img-top" alt="{{ $curso->nombre_curso }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $curso->nombre_curso }}</h5>
