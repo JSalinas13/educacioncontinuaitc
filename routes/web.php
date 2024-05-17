@@ -59,4 +59,5 @@ Route::get('/login', function () {
 
 Route::group(['prefix' => 'usuario'],function () {
     Route::get('/MisCursos', [MisCursosController::class,'index'])->name('usuario.mis.cursos');
+    Route::get('/DetalleCurso/{id}', [MisCursosController::class,'getCurso'])->name('usuario.mis.cursos.detalle');
 });

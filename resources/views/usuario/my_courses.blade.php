@@ -24,8 +24,8 @@
                             </ul>
                             <div class="card-footer">
                                 <div class="alert alert-success" role="alert">
-                                    <i class="fa fa-check-square" aria-hidden="true"></i> <a href="#"
-                                        class="alert-link">Ir a curo</a>
+                                    <i class="fa fa-check-square" aria-hidden="true"></i> <a href="{{route('usuario.mis.cursos.detalle',["id"=>$curso->id])}}"
+                                        class="alert-link">Ir a curso</a>
                                 </div>
                             </div>
                         </div>
