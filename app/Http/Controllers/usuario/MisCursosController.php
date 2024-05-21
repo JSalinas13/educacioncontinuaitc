@@ -43,7 +43,7 @@ class MisCursosController extends Controller
 
     public function getCurso($idCurso){
         //Temporalmente hasta que haya un LOGIN
-        $idAut = 11;
+        $idAut = 8;
         /**
          * IMPORTANTE DEBIDO A QUE NO HAY SESION LOS MENSAJES DE MANERA DE OTRA MANERA PROVICIONAL
          *
