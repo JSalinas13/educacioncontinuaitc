@@ -40,5 +40,18 @@ class CursosRepository
         ->get();
     }
 
+      /**
+     * Método para obtener un curso activo que le perrtenece al estudiante
+     */
+    public function getCurso($idAuth, $idCursoEstudiante){
+        return DB::table('usuarios as u')
+        ->join('cursosestudiantes as ce','ce.estudiante_id','=','u.id')
+        ->join('cursos as c','ce.curso_id','=','c.id')
+        ->select('c.*')
+        ->where('ce.estatus_pago',true)
+        ->where('u.id',$idAuth)
+        ->where('c.id',$idCursoEstudiante)
+        ->first();
+    }
 
 }

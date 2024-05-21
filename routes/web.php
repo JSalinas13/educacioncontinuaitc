@@ -66,6 +66,6 @@ Route::group(['prefix' => 'usuario'],function () {
 
 Route::group(['prefix' => 'cursos'],function () {
     Route::get('/', [CursosController::class,'index'])->name('cursos');
-
+    Route::get('/DetalleCurso/{id}', [MisCursosController::class,'getCurso'])->name('usuario.mis.cursos.detalle');
 });
 
