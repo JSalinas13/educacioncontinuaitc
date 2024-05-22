@@ -17,16 +17,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/404', function () {
+Route::fallback(function () {
     return view('404');
 });
 
 Route::get('/about', function () {
     return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
 });
 
 Route::get('/courses', function () {
