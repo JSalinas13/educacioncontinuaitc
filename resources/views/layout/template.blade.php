@@ -52,9 +52,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{ url('') }}" class="nav-item nav-link active">Inicio</a>
-                <a href="{{ url('about') }}" class="nav-item nav-link active">Nosotros</a>
+                <a href="{{ url('about') }}" class="nav-item nav-link active">Sobre nosotros</a>
                 <a href="{{ url('courses') }}" class="nav-item nav-link active">Cursos</a>
-                <a href="{{ url('contact') }}" class="nav-item nav-link active">Contacto</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Iniciar sesión<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -84,7 +83,7 @@
                     <h4 class="text-white mb-3">Enlace rápido</h4>
                     <a class="btn btn-link" href="{{ url('about') }}">Nosotros</a>
                     <a class="btn btn-link" href="{{ url('courses') }}">Cursos</a>
-                    <a class="btn btn-link" href="{{ url('contact') }}">Contacto</a>
+                    <a class="btn btn-link" href="{{ url('about') }}">Sobre nosotros</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contacto</h4>
@@ -131,7 +130,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!-- Footer End -->
 
