@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/404', function () {
+Route::fallback(function () {
     return view('404');
 });
 
