@@ -123,16 +123,16 @@
         <div class="right-panel">
             <div class="form-container">
                 <h2>Ingresar</h2>
-                <form action="ingresar.php" method="post">
+                <form action="{{ url('/') }}">
                     <label for="nickname">Nickname</label>
                     <input type="text" id="nickname" name="nickname" required>
 
                     <label for="contrasena">Contraseña</label>
                     <input type="password" id="contrasena" name="contrasena" required>
 
-                    <button type="submit">Ingresar</button>
+                    <button type="submit" href="">Ingresar</button>
                 </form>
-                <p>¿Aún no tienes una cuenta? <a href="registro.php">Registrate</a></p>
+                <p>¿Aún no tienes una cuenta? <a href="{{ url('register') }}">Registrate</a></p>
             </div>
         </div>
     </div>
