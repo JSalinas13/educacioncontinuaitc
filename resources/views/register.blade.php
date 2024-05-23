@@ -18,7 +18,7 @@
 
         .container {
             display: flex;
-            width: 800px;
+            width: 1200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
@@ -28,7 +28,7 @@
         .left-panel {
             background-color: #b0c5a1;
             color: white;
-            width: 150%;
+            width: 100%;
             padding: 70px 20px;
             display: flex;
             flex-direction: column;
@@ -112,7 +112,7 @@
         <div class="right-panel">
             <div class="form-container">
                 <h2>Crear cuenta</h2>
-                <form>
+                <form action="{{ url('profile') }}">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre">
 
@@ -140,7 +140,9 @@
                     <label for="contraseña">Contraseña</label>
                     <input type="password" id="contraseña" name="contraseña">
 
-                    <button type="submit">Registrarse</button>
+                    <p>¿Ya tenes una cuenta? <a href="{{ url('login') }}">Ingresar</a></p>
+                    
+                    <button type="submit" href="">Registrarse</button>
                 </form>
             </div>
         </div>

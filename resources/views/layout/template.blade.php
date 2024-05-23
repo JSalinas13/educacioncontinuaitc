@@ -56,7 +56,7 @@
                 <a href="{{ url('courses') }}" class="nav-item nav-link active">Cursos</a>
                 <a href="{{ url('contact') }}" class="nav-item nav-link active">Contacto</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Iniciar sesión<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="{{ url('login') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Iniciar sesión<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

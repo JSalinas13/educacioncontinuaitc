@@ -44,12 +44,12 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/learning', function () {
-    return view('learning');
+Route::get('/coursesCategories', function () {
+    return view('coursesCategories');
 });
 
-Route::get('/learningCourses', function () {
-    return view('learningCourses');
+Route::get('/myCourses', function () {
+    return view('myCourses');
 });
 
 Route::get('/detailCourses', function () {
@@ -62,4 +62,8 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::get('/categories', function () {
+    return view('categories');
 });
