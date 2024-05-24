@@ -165,6 +165,24 @@
     color: white; /* Color del símbolo "+" */
     cursor: pointer; /* Cambia el cursor al pasar sobre el símbolo */
 }
+.boton-guardar {
+            background-color: #4CAF50; /* Color de fondo verde */
+            border: none; /* Sin borde */
+            color: white; /* Color de texto blanco */
+            padding: 15px 32px; /* Espacio interno */
+            text-align: center; /* Alineación de texto centrado */
+            text-decoration: none; /* Sin decoración de texto */
+            display: inline-block; /* Mostrar como bloque */
+            font-size: 16px; /* Tamaño de fuente */
+            margin: 4px 2px; /* Margen entre botones */
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+
+        /* Estilos para cambiar el color del botón al pasar el mouse */
+        .boton-guardar:hover {
+            background-color: #45a049; /* Color de fondo más oscuro */
+        }
    
     </style>
 </head>
@@ -224,7 +242,10 @@
 
 </div>
     </div>
+    <button class="boton-guardar">Guardar</button>
+
 </div>
+
 </body>
 </html>
 
