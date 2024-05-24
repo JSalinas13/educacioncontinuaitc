@@ -7,6 +7,7 @@ use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\LocalidadController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,10 @@ Route::get('/contacto/{id}', [ContactoController::class, 'show']); //muestra una
 Route::post('/contacto', [ContactoController::class, 'store']); //nueva ciudad
 Route::put('/contacto/{id}', [ContactoController::class, 'update']); //actualiza una ciudad por su ID
 Route::delete('/contacto/{id}', [ContactoController::class, 'destroy']); //elimina una ciudad por su ID
+
+//CONTACTO
+Route::get('/usuario', [UsuarioController::class, 'index']); //lista todas las ciudades
+Route::get('/usuario/{id}', [UsuarioController::class, 'show']); //muestra una ciudad
+Route::post('/usuario', [UsuarioController::class, 'store']); //nueva ciudad
+Route::put('/usuario/{id}', [UsuarioController::class, 'update']); //actualiza una ciudad por su ID
+Route::delete('/usuario/{id}', [UsuarioController::class, 'destroy']); //elimina una ciudad por su ID
