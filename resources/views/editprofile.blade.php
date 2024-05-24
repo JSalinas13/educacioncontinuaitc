@@ -45,14 +45,6 @@
             flex-basis: 30%; /* Ancho de la primera columna */
         }
 
-        .editper {
-            margin-left: auto;
-            margin-top: 10px;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
         .datos-usuario {
             text-align: left; /* Alinea el texto a la izquierda */
             margin-left: 200px; /* Agrega un pequeño margen a la izquierda */
@@ -153,21 +145,61 @@
             border-bottom: 2px solid black; /* Línea negra fija horizontal debajo del texto "Perfil" */
             padding-bottom: 6px; /* Espacio entre el texto y la línea */
         }
+        .editable-span {
+        border: 2px solid green; /* Establece un borde sólido de 2px de ancho y color verde */
+        border-radius: 5px; /* Aplica bordes redondos */
+        padding: 5px; /* Añade un espacio interno de 5px para que el texto no esté pegado al borde */
+        display: inline-block; /* Hace que el contenedor abarque solo el contenido */
+        width: calc(100% - 10px); /* Establece el ancho para que el contenedor abarque dos párrafos */
+    }
+
+    .editable-span:focus {
+        outline: none; /* Elimina el contorno predeterminado al hacer clic en el texto */
+    }
+    .agregar-icono {
+    position: absolute; /* Posición absoluta para el símbolo "+" */
+    top: 50%; /* Alineamos verticalmente al centro */
+    left: 50%; /* Alineamos horizontalmente al centro */
+    transform: translate(-50%, -50%); /* Desplazamos el símbolo hacia arriba y hacia la izquierda en la mitad de su tamaño */
+    font-size: 30px; /* Tamaño del símbolo "+" */
+    color: white; /* Color del símbolo "+" */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el símbolo */
+}
+.boton-guardar {
+            background-color: #4CAF50; /* Color de fondo verde */
+            border: none; /* Sin borde */
+            color: white; /* Color de texto blanco */
+            padding: 15px 32px; /* Espacio interno */
+            text-align: center; /* Alineación de texto centrado */
+            text-decoration: none; /* Sin decoración de texto */
+            display: inline-block; /* Mostrar como bloque */
+            font-size: 16px; /* Tamaño de fuente */
+            margin: 4px 2px; /* Margen entre botones */
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+
+        /* Estilos para cambiar el color del botón al pasar el mouse */
+        .boton-guardar:hover {
+            background-color: #45a049; /* Color de fondo más oscuro */
+        }
+   
     </style>
 </head>
 <body>
 <div class="containermg">
-    <div class="profile-picture"></div>
+    <div class="profile-picture">
+        <label for="imageUpload" class="agregar-icono">+</label>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+    </div>
     <div class="contenedor-mostrar-datos">
         <div class="datos-usuario">
             <h3>Juan Pérez López</h3>
             <h4>@juanperez</h4>
         </div>
     </div>
-    <div class="editper">
-        <a href="#" class="link">Editar Perfil</a>
-    </div>
 </div>
+
 <!-- Contenedor principal-info fuera de containermg -->
 <div class="principal-info">
     <div class="columna-izquierda">
@@ -176,7 +208,6 @@
             <li><a href="#">Perfil</a></li>
             <li><a href="#">Mis cursos</a></li>
             <li><a href="#">Agregar curso</a></li>
-
         </ul>
     </div>
     <div class="columna-derecha">
@@ -187,32 +218,34 @@
 <h4 style="margin-bottom: 10px;">Informacion Personal</h4>
     <div class="info-personal" style="border: 5px solid white; margin-bottom: 20px;">
             
-            <div>
-                <p><strong>Nombre completo:</strong> Juan Pérez López</p>
-                <p><strong>Apellido paterno:</strong> Pérez</p>
-                <p><strong>Apellido materno:</strong> López</p>
-                <p><strong>Correo electrónico:</strong> juan.perez@correo.com</p>
-                <p><strong>Teléfono:</strong> 55 5555 5555</p>
-                <p><strong>CURP:</strong> PPLZ890102MEXLSN01</p>
-                <p><strong>RFC:</strong> PPLZ890102LSN01</p>
-                <p><strong>Sexo:</strong> Hombre</p>
-                <p><strong>Localidad:</strong> Celaya, Guanajuato</p>
-                <p><strong>Discapacidades:</strong> Ninguna</p>
-                <p><strong>Alergias:</strong> Ninguna</p>
-                <p><strong>Experiencia:</strong> 5 años de experiencia en desarrollo web.</p>
-            </div>
+    <p><strong>Nombre completo:</strong> <span class="editable-span" contenteditable="true">Juan Pérez López</span></p>
+<p><strong>Apellido paterno:</strong> <span class="editable-span" contenteditable="true">Pérez</span></p>
+<p><strong>Apellido materno:</strong> <span class="editable-span" contenteditable="true">López</span></p>
+<p><strong>Correo electrónico:</strong> <span class="editable-span" contenteditable="true">juan.perez@correo.com</span></p>
+<p><strong>Teléfono:</strong> <span class="editable-span" contenteditable="true">55 5555 5555</span></p>
+<p><strong>CURP:</strong> <span class="editable-span" contenteditable="true">PPLZ890102MEXLSN01</span></p>
+<p><strong>RFC:</strong> <span class="editable-span" contenteditable="true">PPLZ890102LSN01</span></p>
+<p><strong>Sexo:</strong> <span class="editable-span" contenteditable="true">Hombre</span></p>
+<p><strong>Localidad:</strong> <span class="editable-span" contenteditable="true">Celaya, Guanajuato</span></p>
+<p><strong>Discapacidades:</strong> <span class="editable-span" contenteditable="true">Ninguna</span></p>
+<p><strong>Alergias:</strong> <span class="editable-span" contenteditable="true">Ninguna</span></p>
+<p><strong>Experiencia:</strong> <span class="editable-span" contenteditable="true">5 años de experiencia en desarrollo web.</span></p>
+
+
         </div>
         <h4 style="margin-bottom: 10px;">Informacion de contacto</h4>
         <div class="info-contact" style="border: 5px solid white;">
-            
-            <div>
-                <p><strong>Nombre:</strong> María García González</p>
-                <p><strong>Email:</strong> maria.garcia@correo.com</p>
-                <p><strong>Teléfono:</strong> 55 5555 5556</p>
-            </div>
-        </div>
-    </div>
+    <p><strong>Nombre:</strong> <span class="editable-span" contenteditable="true">María García González</span></p>
+    <p><strong>Email:</strong> <span  class="editable-span" contenteditable="true">maria.garcia@correo.com</span></p>
+    <p><strong>Teléfono:</strong> <span  class="editable-span" contenteditable="true">55 5555 5556</span></p>
+    <p><strong>Experiencia:</strong> <span  class="editable-span" contenteditable="true">5 años de experiencia en desarrollo web.</span></p>
+
 </div>
+    </div>
+    <button class="boton-guardar">Guardar</button>
+
+</div>
+
 </body>
 </html>
 

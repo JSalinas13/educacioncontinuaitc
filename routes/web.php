@@ -82,3 +82,10 @@ Route::get('/register', function () {
 Route::get('/categories', function () {
     return view('categories');
 });
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
+
+Route::get('/addCurso', function () {
+    return view('addCurso');
+});
