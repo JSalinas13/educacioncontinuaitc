@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UsuarioRol;
 
-class UsuarioRol extends Controller
+class UsuarioRolController extends Controller
 {
     function crearUsuarioRol($id_usuario, $id_rol) {
         UsuarioRol::create(['id_usuario' => $id_usuario, 'id_rol' => $id_rol]);
