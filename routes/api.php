@@ -7,6 +7,10 @@ use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\LocalidadController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\PrivilegioController;
+use App\Http\Controllers\RolController;
+use App\Http\Controllers\PrivilegioRolController;
+use App\Http\Controllers\UsuarioRolController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +61,32 @@ Route::get('/contacto/{id}', [ContactoController::class, 'show']); //muestra una
 Route::post('/contacto', [ContactoController::class, 'store']); //nueva ciudad
 Route::put('/contacto/{id}', [ContactoController::class, 'update']); //actualiza una ciudad por su ID
 Route::delete('/contacto/{id}', [ContactoController::class, 'destroy']); //elimina una ciudad por su ID
+
+//PRIVILEGIO
+Route::get('/privilegio', [PrivilegioController::class, 'index']); //lista todos los privilegios
+Route::get('/privilegio/{id}', [PrivilegioController::class, 'show']); //muestra un privilegio
+Route::post('/privilegio', [PrivilegioController::class, 'store']); //nuevo privilegio
+Route::put('/privilegio/{id}', [PrivilegioController::class, 'update']); //actualiza un privilegio por su ID
+Route::delete('/privilegio/{id}', [PrivilegioController::class, 'destroy']); //elimina un privilegio por su ID
+
+//ROL
+Route::get('/rol', [RolController::class, 'index']); //lista todos los roles
+Route::get('/rol/{id}', [RolController::class, 'show']); //muestra un rol
+Route::post('/rol', [RolController::class, 'store']); //nuevo rol
+Route::put('/rol/{id}', [RolController::class, 'update']); //actualiza un rol por su ID
+Route::delete('/rol/{id}', [RolController::class, 'destroy']); //elimina un rol por su ID
+
+//PRIVILEGIO_ROL
+Route::get('/privilegiorol', [PrivilegioRolController::class, 'index']); //lista todos los privilegiosRoles
+Route::get('/privilegiorol/{id}', [PrivilegioRolController::class, 'show']); //muestra un privilegioRol
+Route::post('/privilegiorol', [PrivilegioRolController::class, 'store']); //nuevo privilegioRol
+Route::put('/privilegiorol/{id}', [PrivilegioRolController::class, 'update']); //actualiza un privilegioRol por su ID
+Route::delete('/privilegiorol/{id}', [PrivilegioRolController::class, 'destroy']); //elimina un privilegioRol por su ID
+
+//USUARIO_ROL
+Route::get('/usuariorol', [UsuarioRolController::class, 'index']); //lista todos los usuariorol
+Route::get('/usuariorol/{id}', [UsuarioRolController::class, 'show']); //muestra un usuariorol
+Route::post('/usuariorol', [UsuarioRolController::class, 'store']); //nuevo usuariorol
+Route::put('/usuariorol/{id}', [UsuarioRolController::class, 'update']); //actualiza un usuariorol por su ID
+Route::delete('/usuariorol/{id}', [UsuarioRolController::class, 'destroy']); //elimina un usuariorol por su ID
+
