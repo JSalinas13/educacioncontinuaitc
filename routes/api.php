@@ -11,6 +11,7 @@ use App\Http\Controllers\PrivilegioController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\PrivilegioRolController;
 use App\Http\Controllers\UsuarioRolController;
+use App\Http\Controllers\ContactoUsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,3 +91,9 @@ Route::post('/usuariorol', [UsuarioRolController::class, 'store']); //nuevo usua
 Route::put('/usuariorol/{id}', [UsuarioRolController::class, 'update']); //actualiza un usuariorol por su ID
 Route::delete('/usuariorol/{id}', [UsuarioRolController::class, 'destroy']); //elimina un usuariorol por su ID
 
+//CONTACTO_USUARIO
+Route::get('/usuariocontacto', [ContactoUsuarioController::class, 'index']); //lista todos los usuariorol
+Route::get('/usuariocontacto/{id}', [ContactoUsuarioController::class, 'show']); //muestra un usuariocontacto por ID
+Route::post('/usuariocontacto', [ContactoUsuarioController::class, 'store']); //nuevo usuariocontacto
+Route::put('/usuariocontacto/{id}', [ContactoUsuarioController::class, 'update']); //actualiza un usuariocontacto por su ID
+Route::delete('/usuariocontacto/{id,id}', [ContactoUsuarioController::class, 'destroy']); //elimina un usuariocontacto por su ID

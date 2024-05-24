@@ -16,6 +16,19 @@ class ContactoUsuarioController extends Controller
         return "ContactoUsuario creado exitosamente.";
     }
 
+    public function buscarPorId($id_usuario, $id_contacto)
+    {
+        $contactoUsuario = ContactoUsuario::where('id_usuario', $id_usuario)
+            ->where('id_contacto', $id_contacto)
+            ->first();
+
+        if ($contactoUsuario) {
+            echo "ID Usuario: {$contactoUsuario->id_usuario}, ID Contacto: {$contactoUsuario->id_contacto}\n";
+        } else {
+            echo "ContactoUsuario no encontrado.\n";
+        }
+    }
+
     public function mostrar()
     {
         $contactosUsuarios = ContactoUsuario::all();
