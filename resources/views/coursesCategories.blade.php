@@ -4,7 +4,9 @@
 @include('layout/learning/navbar')
 
 <!-- Mis Cursos Start(carrusel de 3 tarjetas cada uno)-->
-<h2 class="text-blue">Mis Cursos</h2>
+<h2 >
+    <a href="{{ url('/categories') }}" class="text-blue">Mis Cursos</a>
+</h2>
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -323,7 +325,9 @@
 <!-- Mis Cursos End-->
 
 <!-- Favoritos Start(carrusel de 3 tarjetas cada uno)-->
-<h2 class="text-blue">Favoritos</h2>
+<h2 >
+    <a href="{{ url('/categories') }}" class="text-blue">Favoritos</a>
+</h2>
 <div id="carouselExampleControlsNoTouching2" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -642,7 +646,9 @@
 <!-- Favoritos End-->
 
 <!-- Cursando Start(carrusel de 3 tarjetas cada uno)-->
-<h2 class="text-blue">Cursando</h2>
+<h2 >
+    <a href="{{ url('/categories') }}" class="text-blue">Cursando</a>
+</h2>
 <div id="carouselExampleControlsNoTouching3" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -961,7 +967,9 @@
 <!-- Cursando End-->
 
 <!-- Lista de deseos Start(carrusel de 3 tarjetas cada uno)-->
-<h2 class="text-blue">Lista de deseos</h2>
+<h2 >
+    <a href="{{ url('/categories') }}" class="text-blue">Lista de deseos</a>
+</h2>
 <div id="carouselExampleControlsNoTouching4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
