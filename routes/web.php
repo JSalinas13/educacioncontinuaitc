@@ -66,3 +66,7 @@ Route::get('/categories', function () {
 Route::get('/editprofile', function () {
     return view('editprofile');
 });
+
+Route::get('/addCurso', function () {
+    return view('addCurso');
+});
