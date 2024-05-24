@@ -63,3 +63,7 @@ Route::get('/register', function () {
 Route::get('/categories', function () {
     return view('categories');
 });
+
+Route::get('/addCurso', function () {
+    return view('addCurso');
+});
