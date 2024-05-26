@@ -7,15 +7,12 @@ use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\LocalidadController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\ContactoController;
-<<<<<<< HEAD
 use App\Http\Controllers\UsuarioController;
-=======
 use App\Http\Controllers\PrivilegioController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\PrivilegioRolController;
 use App\Http\Controllers\UsuarioRolController;
 use App\Http\Controllers\ContactoUsuarioController;
->>>>>>> f2fc90a2483b14cc1f4965c887e164451370d72f
 
 /*
 |--------------------------------------------------------------------------
@@ -67,14 +64,13 @@ Route::post('/contacto', [ContactoController::class, 'store']); //nueva ciudad
 Route::put('/contacto/{id}', [ContactoController::class, 'update']); //actualiza una ciudad por su ID
 Route::delete('/contacto/{id}', [ContactoController::class, 'destroy']); //elimina una ciudad por su ID
 
-<<<<<<< HEAD
 //CONTACTO
 Route::get('/usuario', [UsuarioController::class, 'index']); //lista todas las ciudades
 Route::get('/usuario/{id}', [UsuarioController::class, 'show']); //muestra una ciudad
 Route::post('/usuario', [UsuarioController::class, 'store']); //nueva ciudad
 Route::put('/usuario/{id}', [UsuarioController::class, 'update']); //actualiza una ciudad por su ID
 Route::delete('/usuario/{id}', [UsuarioController::class, 'destroy']); //elimina una ciudad por su ID
-=======
+
 //PRIVILEGIO
 Route::get('/privilegio', [PrivilegioController::class, 'index']); //lista todos los privilegios
 Route::get('/privilegio/{id}', [PrivilegioController::class, 'show']); //muestra un privilegio
@@ -109,4 +105,3 @@ Route::get('/usuariocontacto/{id}', [ContactoUsuarioController::class, 'show']);
 Route::post('/usuariocontacto', [ContactoUsuarioController::class, 'store']); //nuevo usuariocontacto
 Route::put('/usuariocontacto/{id}', [ContactoUsuarioController::class, 'update']); //actualiza un usuariocontacto por su ID
 Route::delete('/usuariocontacto/{id,id}', [ContactoUsuarioController::class, 'destroy']); //elimina un usuariocontacto por su ID
->>>>>>> f2fc90a2483b14cc1f4965c887e164451370d72f
