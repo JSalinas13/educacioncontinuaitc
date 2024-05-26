@@ -64,7 +64,7 @@
                                     <img class="img-fluid" src="img/cat-1.jpg" alt="">
                                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                         style="margin: 1px;">
-                                        <h5 class="m-0">{{$categorias[0]->tipo_curso}}</h5>
+                                        <h5 class="m-0">{{ Str::limit($categorias[0]->tipo_curso,20)}}</h5>
                                         <small class="text-primary">{{$categorias[0]->total_cursos}} courses</small>
                                     </div>
                                 </a>
@@ -73,11 +73,12 @@
                             @if (count($categorias) > 1)
                                 <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                                     <a class="position-relative d-block overflow-hidden" href="">
+
                                         <img class="img-fluid" src="img/cat-2.jpg" alt="">
                                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                             style="margin: 1px;">
-                                            <h5 class="m-0">{{$categorias[1]->tipo_curso}}</h5>
-                                            <small class="text-primary">{{$categorias[0]->total_cursos}} courses</small>
+                                            <h5 class="m-0">{{ Str::limit($categorias[1]->tipo_curso,20)}}</h5>
+                                            <small class="text-primary">{{$categorias[1]->total_cursos}} courses</small>
                                         </div>
                                     </a>
                                 </div>
@@ -88,7 +89,7 @@
                                         <img class="img-fluid" src="img/cat-3.jpg" alt="">
                                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                             style="margin: 1px;">
-                                            <h5 class="m-0">{{$categorias[2]->tipo_curso}}</h5>
+                                            <h5 class="m-0">{{ Str::limit($categorias[2]->tipo_curso,20)}}</h5>
                                             <small class="text-primary">{{$categorias[0]->total_cursos}} courses</small>
                                         </div>
                                     </a>
@@ -107,7 +108,7 @@
                                     style="object-fit: cover;">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                     style="margin:  1px;">
-                                    <h5 class="m-0">{{$categorias[3]->tipo_curso}}</h5>
+                                    <h5 class="m-0">{{ Str::limit($categorias[3]->tipo_curso,20)}}</h5>
                                     <small class="text-primary">{{$categorias[3]->total_cursos}} courses</small>
                                 </div>
                             </a>
@@ -134,7 +135,11 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
+                            @if ($cursos[0]->imagen)
+                            <img class="img-fluid" src="{{$cursos[0]->imagen}}" style="height: 240px; width: 100%" alt="">
+                            @else
                             <img class="img-fluid" src="img/course-1.jpg" alt="">
+                            @endif
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                                     style="border-radius: 30px 0 0 30px;">Read More</a>
@@ -151,14 +156,14 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
                             </div>
-                            <h5 class="mb-4">{{$cursos[0]->nombre_curso}}</h5>
+                            <h5 class="mb-4">{{ Str::limit($cursos[0]->nombre_curso,20)}}</h5>
                         </div>
                         <div class="d-flex border-top">
                             <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                                    class="fa fa-user-tie text-primary me-2"></i>{{Str::limit($cursos[0]->nombre,8)}}</small>
                             <small class="flex-fill text-center border-end py-2"><i
                                     class="fa fa-clock text-primary me-2"></i>{{$cursos[0]->duracion}} Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>{{$cursos[0]->total_estudiantes}}
                                 Students</small>
                         </div>
                     </div>
@@ -167,7 +172,11 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
+                            @if ($cursos[1]->imagen)
+                            <img class="img-fluid" src="{{$cursos[1]->imagen}}" style="height: 240px; width: 100%" alt="">
+                            @else
                             <img class="img-fluid" src="img/course-2.jpg" alt="">
+                            @endif
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                                     style="border-radius: 30px 0 0 30px;">Read More</a>
@@ -184,14 +193,14 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
                             </div>
-                            <h5 class="mb-4">{{$cursos[1]->nombre_curso}}</h5>
+                            <h5 class="mb-4">{{ Str::limit($cursos[1]->nombre_curso,20)}}</h5>
                         </div>
                         <div class="d-flex border-top">
                             <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                                    class="fa fa-user-tie text-primary me-2"></i>{{Str::limit($cursos[1]->nombre,8)}}</small>
                             <small class="flex-fill text-center border-end py-2"><i
                                     class="fa fa-clock text-primary me-2"></i>{{$cursos[1]->duracion}} Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>{{$cursos[1]->total_estudiantes}}
                                 Students</small>
                         </div>
                     </div>
@@ -202,7 +211,12 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
+                            @if ($cursos[3]->imagen)
+                            <img class="img-fluid" src="{{$cursos[3]->imagen}}" style="height: 240px; width: 100%" alt="">
+                            @else
                             <img class="img-fluid" src="img/course-3.jpg" alt="">
+                            @endif
+
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                                     style="border-radius: 30px 0 0 30px;">Read More</a>
@@ -219,14 +233,14 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
                             </div>
-                            <h5 class="mb-4">{{$cursos[2]->nombre_curso}}</h5>
+                            <h5 class="mb-4">{{ Str::limit($cursos[2]->nombre_curso,20)}}</h5>
                         </div>
                         <div class="d-flex border-top">
                             <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                                    class="fa fa-user-tie text-primary me-2"></i>{{Str::limit($cursos[2]->nombre,8)}}</small>
                             <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-clock text-primary me-2"></i>{{$cursos[1]->duracion}} Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
+                                    class="fa fa-clock text-primary me-2"></i>{{$cursos[2]->duracion}} Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>{{$cursos[2]->total_estudiantes}}
                                 Students</small>
                         </div>
                     </div>

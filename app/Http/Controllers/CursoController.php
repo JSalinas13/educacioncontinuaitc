@@ -20,7 +20,12 @@ class CursoController extends Controller
             ->select('tc.tipo_curso', DB::raw('COUNT(c.id) as total_cursos'))
             ->groupBy('tc.tipo_curso')
             ->get();
-        $data['cursos'] = Curso::all();
+            $data['cursos'] = DB::table('cursos as c')
+            ->leftJoin('cursosestudiantes as ce', 'c.id', '=', 'ce.curso_id')
+            ->join('usuarios as u','u.id','=','c.instructor_id')
+            ->select('c.*','u.*', DB::raw('COUNT(ce.estudiante_id) as total_estudiantes'))
+            ->groupBy('c.id','u.id')
+            ->get();
         return view('courses', $data);
     }
 }

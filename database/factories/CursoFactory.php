@@ -23,7 +23,7 @@ class CursoFactory extends Factory
             'objetivo' => $this->faker->paragraph(),
             'precio' => $this->faker->randomFloat(2, 10, 1000),
             'duracion' => $this->faker->time(),
-            'imagen' => $this->faker->imageUrl(),
+            'imagen' => 'https://medialab.news/wp-content/uploads/2021/11/CursosOnlinePor.jpg',
             'dias' => $this->faker->sentence(3),
             'horario' => $this->faker->sentence(3),
             'tipo_id' => TipoCurso::all()->random()->id,
