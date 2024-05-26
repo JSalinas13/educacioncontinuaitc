@@ -1,21 +1,24 @@
 @extends('layout/template')
-@section('name','Cursos')
+@section('name', 'Cursos')
 @section('content')
 
     <!-- Carrussel -->
-
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/logo.png" class=" d-block mx-auto" style="height: 50%" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="coltcarr">First slide label</h5>
-              <p class="colcarr">Some representative placeholder content for the first slide.</p>
+            <div class="carousel-item active">
+                <img src="img/logo.png" class=" d-block mx-auto" style="height: 50%" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="coltcarr">First slide label</h5>
+                    <p class="colcarr">Some representative placeholder content for the first slide.</p>
+                </div>
             </div>
             @if (count($comentarios) > 0)
                 <div class="carousel-item">
@@ -37,36 +40,34 @@
             @endif
 
             @if (count($comentarios) > 1)
-                <div class="carousel-item">
-                    <img src="{{ $comentarios[1]['usuario']->imagen }}" class="d-block mx-auto"
-                        style="height: 500px; width: 50%" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="coltcarr">{{ $comentarios[1]['usuario']->nombre }}</h5>
-                        <p class="colcarr">{{ Str::limit($comentarios[1]->comentario, 50) }}</p>
-                    </div>
+            <div class="carousel-item">
+                <img src="{{ $comentarios[1]['usuario']->imagen }}" class="d-block mx-auto"
+                    style="height: 500px; width: 50%" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="coltcarr">{{ $comentarios[1]['usuario']->nombre }}</h5>
+                    <p class="colcarr">{{ Str::limit($comentarios[1]->comentario, 50) }}</p>
                 </div>
-            @else
-                <div class="carousel-item">
-                    <img src="img/team-2.jpg" class="d-block mx-auto" style="height: 50%" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="coltcarr">Third slide label</h5>
-                        <p class="colcarr">Some representative placeholder content for the third slide.</p>
-                    </div>
+            </div>
+        @else
+            <div class="carousel-item">
+                <img src="img/team-2.jpg" class="d-block mx-auto" style="height: 50%" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="coltcarr">Third slide label</h5>
+                    <p class="colcarr">Some representative placeholder content for the third slide.</p>
                 </div>
-            @endif
-
-
+            </div>
+        @endif
 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
 
     <!-- Categories Start -->
     @if (count($categorias) > 0)
@@ -99,7 +100,8 @@
                                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                             style="margin: 1px;">
                                             <h5 class="m-0">{{ Str::limit($categorias[1]->tipo_curso, 20) }}</h5>
-                                            <small class="text-primary">{{ $categorias[1]->total_cursos }} courses</small>
+                                            <small class="text-primary">{{ $categorias[1]->total_cursos }}
+                                                courses</small>
                                         </div>
                                     </a>
                                 </div>
@@ -111,15 +113,12 @@
                                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                             style="margin: 1px;">
                                             <h5 class="m-0">{{ Str::limit($categorias[2]->tipo_curso, 20) }}</h5>
-                                            <small class="text-primary">{{ $categorias[0]->total_cursos }} courses</small>
+                                            <small class="text-primary">{{ $categorias[0]->total_cursos }}
+                                                courses</small>
                                         </div>
                                     </a>
                                 </div>
                             @endif
-
-
-
-
                         </div>
                     </div>
                     @if (count($categorias) > 3)
@@ -134,40 +133,22 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
-                                    <small class="text-primary">49 Courses</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
-                                    <small class="text-primary">49 Courses</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
-                            <small class="text-primary">49 Courses</small>
-                        </div>
-                    </a>
+                    @endif
                 </div>
             </div>
+            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                <a class="position-relative d-block h-100 overflow-hidden" href="">
+                    <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt=""
+                        style="object-fit: cover;">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                        <h5 class="m-0">Online Marketing</h5>
+                        <small class="text-primary">49 Courses</small>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
+    @endif
     <!-- Categories Start -->
-
 
     <!-- Courses Start -->
     @if (count($cursos) > 0)
@@ -307,7 +288,6 @@
         </div>
     @endif
     <!-- Courses End -->
-
 
     <!-- Testimonial Start -->
     @if (count($comentarios) > 0)
