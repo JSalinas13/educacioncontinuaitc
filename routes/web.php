@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/404', function () {
+Route::fallback(function () {
     return view('404');
 });
 
@@ -27,13 +25,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/courses', function () {
+    return view('courses');
 });
-
-Route::get('/courses', function () {});
-
-Route::get('/courses', [CursoController::class,'cursos'])->name('cursos');
 
 Route::get('/team', function () {
     return view('team');
@@ -46,16 +40,33 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/learning', function () {
-    return view('learning');
+Route::get('/coursesCategories', function () {
+    return view('coursesCategories');
 });
 
-Route::get('/learningCourses', function () {
-    return view('learningCourses');
+Route::get('/myCourses', function () {
+    return view('myCourses');
+});
+
+Route::get('/detailCourses', function () {
+    return view('detailCourses');
 });
 
 Route::get('/login', function () {
-    return view('login.login');
-})->name('login');
+    return view('login');
+});
 
+Route::get('/register', function () {
+    return view('register');
+});
 
+Route::get('/categories', function () {
+    return view('categories');
+});
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
+
+Route::get('/addCurso', function () {
+    return view('addCurso');
+});
