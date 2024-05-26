@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PrivilegioRolController extends Controller
+class Comentario extends Controller
 {
     //
 }
