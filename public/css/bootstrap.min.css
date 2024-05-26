@@ -3086,7 +3086,7 @@ fieldset:disabled .btn {
     border-color: #13315c
 }
 
-.imgp2{
+.imgp2 {
     width: 13%
 }
 
@@ -6654,8 +6654,8 @@ fieldset:disabled .btn {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100% 100%
@@ -6667,6 +6667,16 @@ fieldset:disabled .btn {
 
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+}
+
+/* Cambia el color de la flecha del botón previo */
+.carousel-control-prev-icon-color {
+    filter: invert(63%) sepia(14%) saturate(2768%) hue-rotate(89deg) brightness(94%) contrast(98%);
+}
+
+/* Cambia el color de la flecha del botón siguiente */
+.carousel-control-next-icon-color {
+    filter: invert(63%) sepia(14%) saturate(2768%) hue-rotate(89deg) brightness(94%) contrast(98%);
 }
 
 .carousel-indicators {
@@ -8301,6 +8311,10 @@ fieldset:disabled .btn {
     color: #06BBCC !important
 }
 
+.text-yellow {
+    color: #FFD300 !important
+}
+
 .text-color {
     color: #688B58 !important
 }
@@ -8361,6 +8375,34 @@ fieldset:disabled .btn {
     color: inherit !important
 }
 
+.circle {
+    width: 50px;
+    /* Ancho del círculo */
+    height: 50px;
+    /* Altura del círculo */
+    background-color: green;
+    /* Color del círculo */
+    border-radius: 50%;
+    /* Hacemos que el borde sea redondeado */
+    display: flex;
+    /* Para centrar el contenido */
+    justify-content: center;
+    /* Para centrar horizontalmente */
+    align-items: center;
+    /* Para centrar verticalmente */
+}
+
+.icon {
+    color: white;
+    /* Color del icono */
+    font-size: 24px;
+    /* Tamaño del icono */
+}
+
+.margenL70 {
+    margin-left: 70px
+}
+
 .bg-primary {
     background-color: #13315c !important
 }
@@ -8390,11 +8432,11 @@ fieldset:disabled .btn {
 }
 
 .bg-light2 {
-    background-color: #D4F4DC!important
+    background-color: #D4F4DC !important
 }
 
 .bg-light3 {
-    background-color: #AFE3C0!important
+    background-color: #AFE3C0 !important
 }
 
 .bg-dark {
@@ -8415,6 +8457,12 @@ fieldset:disabled .btn {
 
 .bg-gradient {
     background-image: var(--bs-gradient) !important
+}
+
+.carousel-control-prev2:hover,
+.carousel-control-next2:hover {
+    background-color: #688B58;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .user-select-all {

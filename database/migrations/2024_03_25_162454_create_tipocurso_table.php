@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('tiposcursos', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo_curso', 50);
+            $table->string('tipo_curso', 50)->unique();
             $table->unsignedBigInteger('area_id');
-
             $table->foreign('area_id')->references('id')->on('areas');
             $table->timestamps();
         });

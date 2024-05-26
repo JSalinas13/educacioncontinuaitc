@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\cursos\CursosController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\usuario\MisCursosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +45,27 @@ Route::get('/testimonial', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/learning', function () {
+    return view('learning');
+});
+
+Route::get('/learningCourses', function () {
+    return view('learningCourses');
+});
+
+Route::get('/login', function () {
+    return view('login.login');
+})->name('login');
+
+Route::group(['prefix' => 'usuario'],function () {
+    Route::get('/MisCursos', [MisCursosController::class,'index'])->name('usuario.mis.cursos');
+
+});
+
+
+Route::group(['prefix' => 'cursos'],function () {
+    Route::get('/', [CursosController::class,'index'])->name('cursos');
+    Route::get('/DetalleCurso/{id}', [MisCursosController::class,'getCurso'])->name('usuario.mis.cursos.detalle');
+});
+

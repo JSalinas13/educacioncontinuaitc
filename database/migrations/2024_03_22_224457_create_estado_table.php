@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('estados', function (Blueprint $table) {
             $table->id();
-            $table->string('estado', 150);
-            $table->string('pais', 250);
+            $table->string('estado', 150)->unique();
+            $table->string('pais', 250)->default('México');
+            $table->timestamps();
         });
     }
 
