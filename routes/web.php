@@ -27,8 +27,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/courses', function () {
-    return view('courses');
+
+Route::get('/contact', function () {
+    return view('contact');
 });
 
 Route::get('/courses', [CursoController::class,'cursos'])->name('cursos');
@@ -63,9 +64,6 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-    return view('login.login');
-})->name('login');
-
 
 Route::get('/categories', function () {
     return view('categories');
