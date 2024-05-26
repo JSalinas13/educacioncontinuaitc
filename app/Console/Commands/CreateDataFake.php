@@ -45,7 +45,7 @@ class CreateDataFake extends Command
         TipoCurso::factory()->count($count)->create();
         Usuario::factory()->count($count)->create();
         Curso::factory()->count($count)->create();
-        CursoEstudiante::factory()->count($count*5)->create();
+        CursoEstudiante::factory()->count($count)->create();
         $this->info("$count gera comando exitosamente.");
     }
 }

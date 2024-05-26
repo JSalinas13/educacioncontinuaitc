@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('estado', 150)->unique();
             $table->string('pais', 250)->default('México');
-            $table->timestamps();
         });
     }
 
