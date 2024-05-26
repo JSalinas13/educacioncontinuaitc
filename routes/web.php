@@ -1,12 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
-=======
-use App\Http\Controllers\CursoController;
-use Illuminate\Support\Facades\Route;
-
->>>>>>> d89c436af6be8f9e4b8f12227a8b5fda3309b1bd
 
 /*
 |--------------------------------------------------------------------------
@@ -31,19 +25,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
-<<<<<<< HEAD
 Route::get('/courses', function () {
     return view('courses');
 });
-=======
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/courses', function () {});
-
-Route::get('/courses', [CursoController::class,'cursos'])->name('cursos');
->>>>>>> d89c436af6be8f9e4b8f12227a8b5fda3309b1bd
 
 Route::get('/team', function () {
     return view('team');
@@ -69,18 +53,12 @@ Route::get('/detailCourses', function () {
 });
 
 Route::get('/login', function () {
-<<<<<<< HEAD
     return view('login');
 });
 
 Route::get('/register', function () {
     return view('register');
 });
-=======
-    return view('login.login');
-})->name('login');
-
->>>>>>> d89c436af6be8f9e4b8f12227a8b5fda3309b1bd
 
 Route::get('/categories', function () {
     return view('categories');
