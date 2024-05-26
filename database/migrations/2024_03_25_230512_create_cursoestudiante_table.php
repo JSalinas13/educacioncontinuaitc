@@ -15,7 +15,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('estudiante_id');
+<<<<<<< HEAD
             $table->boolean('estatus_pago')->nullable(false);
+=======
+            $table->boolean('estatus_pago')->nullable(false)->change();
+>>>>>>> 30f9b9c588f52c46915d29e647483892a2740f8b
             $table->decimal('calificacion', 10, 2);
 
             $table->foreign('curso_id')->references('id')->on('cursos');

@@ -13,14 +13,21 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->string('nombre', 250)->nullable(false);
             $table->string('apellido_paterno', 250)->nullable(false);
             $table->string('apellido_materno', 250)->nullable(false);
+=======
+            $table->string('nombre', 250)->nullable(false)->change();
+            $table->string('apellido_paterno', 250)->nullable(false)->change();
+            $table->string('apellido_materno', 250)->nullable(false)->change();
+>>>>>>> 30f9b9c588f52c46915d29e647483892a2740f8b
             $table->string('correo', 200)->unique()->nullable(false);
             $table->string('curp', 18)->unique()->nullable(false);
             $table->text('imagen');
             $table->string('rfc', 13)->unique();
             $table->text('expreriencia');
+<<<<<<< HEAD
             $table->string('sexo', 1)->nullable(false);
             $table->text('discapacidades');
             $table->text('alergias');
@@ -28,6 +35,14 @@ return new class extends Migration
             $table->string('contrasena', 32)->nullable(false);
             #De manera temporal
             $table->unsignedBigInteger('localidad_id')->nullable();
+=======
+            $table->string('sexo', 1)->nullable(false)->change();
+            $table->text('discapacidades');
+            $table->text('alergias');
+            $table->string('usuario', 18)->nullable(false)->change();
+            $table->string('contrasena', 32)->nullable(false)->change();
+            $table->unsignedBigInteger('localidad_id');
+>>>>>>> 30f9b9c588f52c46915d29e647483892a2740f8b
             $table->foreign('localidad_id')->references('id')->on('localidades');
             $table->timestamps();
         });

@@ -55,6 +55,7 @@
                 <a href="{{ url('about') }}" class="nav-item nav-link active">Sobre nosotros</a>
                 <a href="{{ url('courses') }}" class="nav-item nav-link active">Cursos</a>
             </div>
+<<<<<<< HEAD
 
             <!-- Esta parte cambia según si se ha iniciado sesión o no, por lo que no es necesario hacer copias por cada tipo de usuarios -->
             <?php //if(isset($_SESSION['id_usuario'])):?>
@@ -62,6 +63,9 @@
             <?php //else: ?>
                     <!--<a href="{{ url('login') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Iniciar sesión<i class="fa fa-arrow-right ms-3"></i></a>-->
             <?php //endif;?>
+=======
+            <a href="{{ url('login') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Iniciar sesión<i class="fa fa-arrow-right ms-3"></i></a>
+>>>>>>> 30f9b9c588f52c46915d29e647483892a2740f8b
         </div>
     </nav>
     <!-- Navbar End -->

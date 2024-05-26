@@ -27,6 +27,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
+<<<<<<< HEAD
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -34,6 +35,11 @@ Route::get('/contact', function () {
 Route::get('/courses', function () {});
 
 Route::get('/courses', [CursoController::class,'cursos'])->name('cursos');
+=======
+Route::get('/courses', function () {
+    return view('courses');
+});
+>>>>>>> 30f9b9c588f52c46915d29e647483892a2740f8b
 
 Route::get('/team', function () {
     return view('team');

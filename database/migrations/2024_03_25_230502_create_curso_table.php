@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('cursos', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->string('nombre_curso', 100)->nullable(false);
             $table->text('objetivo')->nullable(false);
             $table->decimal('precio', 10, 2)->nullable(false);
+=======
+            $table->string('nombre_curso', 100)->nullable(false)->change();
+            $table->text('objetivo')->nullable(false)->change();
+            $table->decimal('precio', 10, 2)->nullable(false)->change();
+>>>>>>> 30f9b9c588f52c46915d29e647483892a2740f8b
             $table->time('duracion');
             $table->text('imagen');
             $table->text('dias');
