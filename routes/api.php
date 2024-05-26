@@ -2,8 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
+
 use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\CiudadController;
 use App\Http\Controllers\LocalidadController;
@@ -14,7 +13,6 @@ use App\Http\Controllers\RolController;
 use App\Http\Controllers\PrivilegioRolController;
 use App\Http\Controllers\UsuarioRolController;
 use App\Http\Controllers\ContactoUsuarioController;
->>>>>>> d89c436af6be8f9e4b8f12227a8b5fda3309b1bd
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +28,6 @@ use App\Http\Controllers\ContactoUsuarioController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-<<<<<<< HEAD
-=======
-
 //ESTADO
 Route::get('/estado', [EstadoController::class, 'index']); //lista todos los estados
 Route::get('/estado/{id}', [EstadoController::class, 'show']); //muestra un estado
@@ -102,4 +97,3 @@ Route::get('/usuariocontacto/{id}', [ContactoUsuarioController::class, 'show']);
 Route::post('/usuariocontacto', [ContactoUsuarioController::class, 'store']); //nuevo usuariocontacto
 Route::put('/usuariocontacto/{id}', [ContactoUsuarioController::class, 'update']); //actualiza un usuariocontacto por su ID
 Route::delete('/usuariocontacto/{id,id}', [ContactoUsuarioController::class, 'destroy']); //elimina un usuariocontacto por su ID
->>>>>>> d89c436af6be8f9e4b8f12227a8b5fda3309b1bd
