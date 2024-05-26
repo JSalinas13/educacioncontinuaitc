@@ -148,7 +148,7 @@
             </div>
         </div>
     @endif
-    <!-- Categories Start -->
+    <!-- Categories End -->
 
     <!-- Courses Start -->
     @if (count($cursos) > 0)

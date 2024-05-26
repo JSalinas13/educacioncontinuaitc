@@ -2,6 +2,7 @@
 
 /**
  * @author Luis Gerardo López Ruiz
+ * @author Sandra Paola Gutierrez Marcial
  */
 
 namespace App\Http\Controllers;
