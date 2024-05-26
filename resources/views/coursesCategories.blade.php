@@ -7,9 +7,9 @@
     <h2>
         <a href="{{ url('/categories') }}" class="text-blue">Mis Cursos</a>
     </h2>
+    @if (count($cursos) > 0)
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
         <div class="carousel-inner">
-            @if (count($cursos) > 0)
                 @foreach ($cursos->chunk(3) as $chunkIndex => $cursoChunk)
                     <div class="carousel-item @if($chunkIndex == 0) active @endif">
                         <div class="container-xxl py-3">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 @endforeach
-            @endif
+
         </div>
         <button class="carousel-control-prev carousel-control-prev2" type="button"
             data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev" style="width: 5%;">
@@ -74,7 +74,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
+    @else
+        <br>
+    @endif
     <!-- Mis Cursos End-->
 
     <!-- Favoritos Start(carrusel de 3 tarjetas cada uno)-->
