@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-=======
-use App\Http\Controllers\CursoController;
-use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -32,15 +28,6 @@ Route::get('/about', function () {
 Route::get('/courses', function () {
     return view('courses');
 });
-=======
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/courses', function () {});
-
-Route::get('/courses', [CursoController::class,'cursos'])->name('cursos');
->>>>>>> d89c436af6be8f9e4b8f12227a8b5fda3309b1bd
 
 Route::get('/team', function () {
     return view('team');
@@ -72,9 +59,6 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-    return view('login.login');
-})->name('login');
-
 
 Route::get('/categories', function () {
     return view('categories');

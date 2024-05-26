@@ -3,7 +3,9 @@
 namespace App\Console\Commands;
 
 use App\Models\Area;
+use App\Models\Comentario;
 use App\Models\Curso;
+use App\Models\CursoComentario;
 use App\Models\CursoEstudiante;
 use App\Models\TipoCurso;
 use App\Models\Usuario;
@@ -45,7 +47,10 @@ class CreateDataFake extends Command
         TipoCurso::factory()->count($count)->create();
         Usuario::factory()->count($count)->create();
         Curso::factory()->count($count)->create();
-        CursoEstudiante::factory()->count($count*5)->create();
+        CursoEstudiante::factory()->count($count*10)->create();
+        Comentario::factory()->count($count*10)->create();
+        CursoComentario::factory()->count($count*10)->create();
+
         $this->info("$count gera comando exitosamente.");
     }
 }
