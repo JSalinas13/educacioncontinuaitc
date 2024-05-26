@@ -40,23 +40,23 @@
             @endif
 
             @if (count($comentarios) > 1)
-            <div class="carousel-item">
-                <img src="{{ $comentarios[1]['usuario']->imagen }}" class="d-block mx-auto"
-                    style="height: 500px; width: 50%" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="coltcarr">{{ $comentarios[1]['usuario']->nombre }}</h5>
-                    <p class="colcarr">{{ Str::limit($comentarios[1]->comentario, 50) }}</p>
+                <div class="carousel-item">
+                    <img src="{{ $comentarios[1]['usuario']->imagen }}" class="d-block mx-auto"
+                        style="height: 500px; width: 50%" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="coltcarr">{{ $comentarios[1]['usuario']->nombre }}</h5>
+                        <p class="colcarr">{{ Str::limit($comentarios[1]->comentario, 50) }}</p>
+                    </div>
                 </div>
-            </div>
-        @else
-            <div class="carousel-item">
-                <img src="img/team-2.jpg" class="d-block mx-auto" style="height: 50%" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="coltcarr">Third slide label</h5>
-                    <p class="colcarr">Some representative placeholder content for the third slide.</p>
+            @else
+                <div class="carousel-item">
+                    <img src="img/team-2.jpg" class="d-block mx-auto" style="height: 50%" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="coltcarr">Third slide label</h5>
+                        <p class="colcarr">Some representative placeholder content for the third slide.</p>
+                    </div>
                 </div>
-            </div>
-        @endif
+            @endif
 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -93,33 +93,41 @@
 
                             @if (count($categorias) > 1)
                                 <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                                    <form action="{{ route('categoryCourse') }}" method="POST" class="position-relative d-block overflow-hidden">
+                                    <form action="{{ route('categoryCourse') }}" method="POST"
+                                        class="position-relative d-block overflow-hidden">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $categorias[1]->id }}">
-                                        <button type="submit" class="btn btn-link p-0 m-0" style="border: none; background: none; width: 100%; text-align: left;">
+                                        <button type="submit" class="btn btn-link p-0 m-0"
+                                            style="border: none; background: none; width: 100%; text-align: left;">
                                             <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                                style="margin: 1px;">
                                                 <h5 class="m-0">{{ Str::limit($categorias[1]->tipo_curso, 20) }}</h5>
-                                                <small class="text-primary">{{ $categorias[1]->total_cursos }} courses</small>
+                                                <small class="text-primary">{{ $categorias[1]->total_cursos }}
+                                                    courses</small>
                                             </div>
                                         </button>
                                     </form>
                                 </div>
                             @endif
                             @if (count($categorias) > 2)
-                            <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                                <form action="{{ route('categoryCourse') }}" method="POST" class="position-relative d-block overflow-hidden">
-                                    @csrf
-                                    <input type="hidden" name="id" value="{{ $categorias[2]->id }}">
-                                    <button type="submit" class="btn btn-link p-0 m-0" style="border: none; background: none; width: 100%; text-align: left;">
-                                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                            <h5 class="m-0">{{ Str::limit($categorias[2]->tipo_curso, 20) }}</h5>
-                                            <small class="text-primary">{{ $categorias[2]->total_cursos }} courses</small>
-                                        </div>
-                                    </button>
-                                </form>
-                            </div>
+                                <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                                    <form action="{{ route('categoryCourse') }}" method="POST"
+                                        class="position-relative d-block overflow-hidden">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $categorias[2]->id }}">
+                                        <button type="submit" class="btn btn-link p-0 m-0"
+                                            style="border: none; background: none; width: 100%; text-align: left;">
+                                            <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                                style="margin: 1px;">
+                                                <h5 class="m-0">{{ Str::limit($categorias[2]->tipo_curso, 20) }}</h5>
+                                                <small class="text-primary">{{ $categorias[2]->total_cursos }}
+                                                    courses</small>
+                                            </div>
+                                        </button>
+                                    </form>
+                                </div>
                             @endif
                         </div>
                     </div>
@@ -138,19 +146,10 @@
                     @endif
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                <a class="position-relative d-block h-100 overflow-hidden" href="">
-                    <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt=""
-                        style="object-fit: cover;">
-                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                        <h5 class="m-0">Online Marketing</h5>
-                        <small class="text-primary">49 Courses</small>
-                    </div>
-                </a>
-            </div>
         </div>
     @endif
-    <!-- Categories End -->
+    <!-- Categories Start -->
+
 
     <!-- Courses Start -->
     @if (count($cursos) > 0)
@@ -174,7 +173,9 @@
                                     <form action="{{ route('detail') }}" method="POST" class="d-inline">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $cursos[0]->id }}">
-                                        <button type="submit" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                        <button type="submit"
+                                            class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                            style="border-radius: 30px 0 0 30px;">
                                             Read More
                                         </button>
                                     </form>
@@ -219,7 +220,9 @@
                                         <form action="{{ route('detail') }}" method="POST" class="d-inline">
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $cursos[1]->id }}">
-                                            <button type="submit" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                            <button type="submit"
+                                                class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                                style="border-radius: 30px 0 0 30px;">
                                                 Read More
                                             </button>
                                         </form>
@@ -268,7 +271,9 @@
                                         <form action="{{ route('detail') }}" method="POST" class="d-inline">
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $cursos[2]->id }}">
-                                            <button type="submit" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                            <button type="submit"
+                                                class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                                style="border-radius: 30px 0 0 30px;">
                                                 Read More
                                             </button>
                                         </form>
