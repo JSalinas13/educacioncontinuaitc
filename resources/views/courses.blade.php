@@ -80,7 +80,6 @@
                 <div class="row g-3">
                     <div class="col-lg-7 col-md-6">
                         <div class="row g-3">
-
                             <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                                 <a class="position-relative d-block overflow-hidden" href="">
                                     <img class="img-fluid" src="img/cat-1.jpg" alt="">
@@ -94,30 +93,33 @@
 
                             @if (count($categorias) > 1)
                                 <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                                    <a class="position-relative d-block overflow-hidden" href="">
-
-                                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                                            style="margin: 1px;">
-                                            <h5 class="m-0">{{ Str::limit($categorias[1]->tipo_curso, 20) }}</h5>
-                                            <small class="text-primary">{{ $categorias[1]->total_cursos }}
-                                                courses</small>
-                                        </div>
-                                    </a>
+                                    <form action="{{ route('categoryCourse') }}" method="POST" class="position-relative d-block overflow-hidden">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $categorias[1]->id }}">
+                                        <button type="submit" class="btn btn-link p-0 m-0" style="border: none; background: none; width: 100%; text-align: left;">
+                                            <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                                <h5 class="m-0">{{ Str::limit($categorias[1]->tipo_curso, 20) }}</h5>
+                                                <small class="text-primary">{{ $categorias[1]->total_cursos }} courses</small>
+                                            </div>
+                                        </button>
+                                    </form>
                                 </div>
                             @endif
                             @if (count($categorias) > 2)
-                                <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                                    <a class="position-relative d-block overflow-hidden" href="">
+                            <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                                <form action="{{ route('categoryCourse') }}" method="POST" class="position-relative d-block overflow-hidden">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $categorias[2]->id }}">
+                                    <button type="submit" class="btn btn-link p-0 m-0" style="border: none; background: none; width: 100%; text-align: left;">
                                         <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                                            style="margin: 1px;">
+                                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                             <h5 class="m-0">{{ Str::limit($categorias[2]->tipo_curso, 20) }}</h5>
-                                            <small class="text-primary">{{ $categorias[0]->total_cursos }}
-                                                courses</small>
+                                            <small class="text-primary">{{ $categorias[2]->total_cursos }} courses</small>
                                         </div>
-                                    </a>
-                                </div>
+                                    </button>
+                                </form>
+                            </div>
                             @endif
                         </div>
                     </div>
@@ -169,8 +171,13 @@
                                     <img class="img-fluid" src="img/course-1.jpg" alt="">
                                 @endif
                                 <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                    <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                        style="border-radius: 30px 0 0 30px;">Read More</a>
+                                    <form action="{{ route('detail') }}" method="POST" class="d-inline">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $cursos[0]->id }}">
+                                        <button type="submit" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                            Read More
+                                        </button>
+                                    </form>
                                     <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
                                         style="border-radius: 0 30px 30px 0;">Join Now</a>
                                 </div>
@@ -209,8 +216,13 @@
                                     @endif
                                     <div
                                         class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                        <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                            style="border-radius: 30px 0 0 30px;">Read More</a>
+                                        <form action="{{ route('detail') }}" method="POST" class="d-inline">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $cursos[1]->id }}">
+                                            <button type="submit" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                                Read More
+                                            </button>
+                                        </form>
                                         <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
                                             style="border-radius: 0 30px 30px 0;">Join Now</a>
                                     </div>
@@ -253,8 +265,13 @@
 
                                     <div
                                         class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                        <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                            style="border-radius: 30px 0 0 30px;">Read More</a>
+                                        <form action="{{ route('detail') }}" method="POST" class="d-inline">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $cursos[2]->id }}">
+                                            <button type="submit" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                                Read More
+                                            </button>
+                                        </form>
                                         <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
                                             style="border-radius: 0 30px 30px 0;">Join Now</a>
                                     </div>

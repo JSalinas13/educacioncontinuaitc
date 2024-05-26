@@ -12,7 +12,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light2">
                     <div class="position-relative overflow-hidden">
+                        @if ($course->imagen)
+                        <img class="img-fluid" src="{{$course->imagen}}" alt="" style="width: 100%; height: 200px;">
+                        @else
                         <img class="img-fluid" src="img/cursos.jpg" alt="">
+                        @endif
                     </div>
                     <div class="p-4 pb-0">
                         <h4 class="mb-0">{{ Str::limit($course->nombre_curso,20)}}</h4>
@@ -31,9 +35,14 @@
                             <div class="me-3 mb-0 circle margenL70">
                                 <!-- Icono "i" -->
                                 <i class="icon">
-                                    <a href="{{ url('/detailCourses') }}">
-                                        <h1>i</h1>
-                                    </a>
+                                    <form action="{{ route('detail') }}" method="POST" class="d-inline">
+                                        @method('POST')
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $course->id }}">
+                                        <button type="submit" style="background-color: transparent; border: none; cursor: pointer;">
+                                            <h1>i</h1>
+                                        </button>
+                                    </form>
                                 </i>
                             </div>
                         </div>
@@ -41,7 +50,6 @@
                 </div>
             </div>
             @endforeach
-
         </div>
     </div>
 </div>

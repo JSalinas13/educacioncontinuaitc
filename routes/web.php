@@ -40,15 +40,11 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/coursesCategories', function () {
-    return view('coursesCategories');
-});
+Route::post('/coursesCategories', [CursoController::class,'categoriaCurso'])->name('categoryCourse');
 
 Route::get('/myCourses', [CursoEstudianteController::class,'mycourse']);
 
-Route::get('/detailCourses', function () {
-    return view('detailCourses');
-});
+Route::post('/detailCourses',[CursoController::class,'detail'])->name('detail');
 
 Route::get('/login', function () {
     return view('login');

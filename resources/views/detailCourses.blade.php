@@ -1,7 +1,7 @@
 @extends('layout/template')
 @section('name','Mi Aprendizaje')
 @section('content')
-@include('layout/learning/navbar')
+
 <div class="container-xxl py-3">
     <div class="container">
         <div class="row g-4 justify-content-center" style="background-color: black">
@@ -11,8 +11,8 @@
             </div>
             <!-- Titulo y subtitulo -->
             <div class="row">
-                <h2 class="text-white">Topicos avanzados de temas selectos de Spiderman parte 2</h2>
-                <p class="text-white">Curso enfocado para discutir temas sobre el hombre araña y su multiverso incluyendo a Miles Morales y Spidergwen</p>
+                <h2 class="text-white">{{$curso->nombre_curso}}</h2>
+                <p class="text-white">{{$curso->objetivo}}</p>
             </div>
             <!-- Datos adicionales -->
             <div class="row" style="align-content: right">
@@ -25,10 +25,10 @@
                         <img src="img/estrella.png" style="width:8%; height:8%;"></img></p>
                 </div>
                 <div class="col-2">
-                    <a href="{{ url('testimonial') }}">(666 calificaciones)</a>
+                    <a href="{{ url('testimonial') }}">{{$curso->total_estudiantes}}</a>
                 </div>
                 <div class="col-5">
-                    <p class="text-white">9999 Estudiantes</p>
+                    <p class="text-white">{{$curso->total_estudiantes}}</p>
                 </div>
                 <div class="col">
                     &nbsp;
@@ -70,7 +70,7 @@
                 <div class="col">
                     <img src="img/sombrero-de-graduacion.png" style="width:20%;"></img> Informacion 1
                 </div>
-                <<div class="col">
+                <div class="col">
                     <img src="img/sombrero-de-graduacion.png" style="width:20%;"></img> Informacion 1
                 </div>
         </div>
@@ -92,7 +92,7 @@
                 <div class="col">
                     <img src="img/video.png" style="width:8%;"></img> Informacion 1
                 </div>
-                <<div class="col">
+                <div class="col">
                     <img src="img/trofeo.png" style="width:8%;"></img> Informacion 1
                 </div>
         </div>
@@ -114,7 +114,7 @@
                 <div class="col">
                     <img src="img/sombrero-de-graduacion.png" style="width:20%;"></img> Informacion 1
                 </div>
-                <<div class="col">
+                <div class="col">
                     <img src="img/sombrero-de-graduacion.png" style="width:20%;"></img> Informacion 1
                 </div>
         </div>
@@ -136,7 +136,7 @@
                 <div class="col">
                     <img src="img/sombrero-de-graduacion.png" style="width:20%;"></img> Informacion 1
                 </div>
-                <<div class="col">
+                <div class="col">
                     <img src="img/sombrero-de-graduacion.png" style="width:20%;"></img> Informacion 1
                 </div>
         </div>
@@ -159,7 +159,11 @@
         <p>NetRet</p>
         <div class="row">
             <div class="col-3">
+                @if ($detalleInstructor)
+                <img src="{{$detalleInstructor->imagen}}" style=" height:150px;"></img>
+                @else
                 <img src="img/agua.jpg" style=" height:150px;"></img>
+                @endif
                 <p>RetBet</p>
             </div>
             <div class="col-2">
