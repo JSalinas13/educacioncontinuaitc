@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\cursos\CursosController;
+use App\Http\Controllers\CursoController;
+use App\Http\Controllers\CursoEstudianteController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\usuario\MisCursosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/404', function () {
+Route::fallback(function () {
     return view('404');
 });
 
@@ -27,13 +27,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/courses', function () {
-    return view('courses');
-});
+Route::get('/courses', [CursoController::class,'cursos'])->name('cursos');
 
 Route::get('/team', function () {
     return view('team');
@@ -46,26 +40,27 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/learning', function () {
-    return view('learning');
-});
+Route::post('/coursesCategories', [CursoController::class,'categoriaCurso'])->name('categoryCourse');
 
-Route::get('/learningCourses', function () {
-    return view('learningCourses');
-});
+Route::get('/myCourses', [CursoEstudianteController::class,'mycourse']);
+
+Route::post('/detailCourses',[CursoController::class,'detail'])->name('detail');
 
 Route::get('/login', function () {
-    return view('login.login');
-})->name('login');
-
-Route::group(['prefix' => 'usuario'],function () {
-    Route::get('/MisCursos', [MisCursosController::class,'index'])->name('usuario.mis.cursos');
-
+    return view('login');
 });
 
-
-Route::group(['prefix' => 'cursos'],function () {
-    Route::get('/', [CursosController::class,'index'])->name('cursos');
-    Route::get('/DetalleCurso/{id}', [MisCursosController::class,'getCurso'])->name('usuario.mis.cursos.detalle');
+Route::get('/register', function () {
+    return view('register');
 });
 
+Route::get('/categories', function () {
+    return view('categories');
+});
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
+
+Route::get('/addCurso', function () {
+    return view('addCurso');
+});

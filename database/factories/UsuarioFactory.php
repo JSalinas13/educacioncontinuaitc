@@ -22,7 +22,7 @@ class UsuarioFactory extends Factory
             'apellido_materno' => $this->faker->lastName,
             'correo' => $this->faker->unique()->safeEmail,
             'curp' => Str::random(18),
-            'imagen' => $this->faker->imageUrl(),
+            'imagen' => 'https://images6.fanpop.com/image/photos/33000000/Jack-Sparrow-POTC-4-captain-jack-sparrow-33058806-960-780.jpg',
             'rfc' => Str::random(13),
             'expreriencia' => $this->faker->paragraph(),
             'sexo' => $this->faker->randomElement(['M', 'F']),

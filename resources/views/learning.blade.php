@@ -3,7 +3,7 @@
 @section('content')
 @include('layout/learning/navbar')
 
-<!-- Mis Cursos Start(carrusel de 3 tarjetas cada uno)--> 
+<!-- Mis Cursos Start(carrusel de 3 tarjetas cada uno)-->
 <h2 class="text-blue">Mis Cursos</h2>
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
     <div class="carousel-inner">
@@ -33,7 +33,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -64,7 +64,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -95,7 +95,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -134,7 +134,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -165,7 +165,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -196,7 +196,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -235,7 +235,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -266,7 +266,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -297,7 +297,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -352,7 +352,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -383,7 +383,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -414,7 +414,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -453,7 +453,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -484,7 +484,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -515,7 +515,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -554,7 +554,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -585,7 +585,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -616,7 +616,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -671,7 +671,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -702,7 +702,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -733,7 +733,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -772,7 +772,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -803,7 +803,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -834,7 +834,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -873,7 +873,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -904,7 +904,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -935,7 +935,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -990,7 +990,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1021,7 +1021,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1052,7 +1052,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1091,7 +1091,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1122,7 +1122,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1153,7 +1153,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1192,7 +1192,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1223,7 +1223,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>
@@ -1254,7 +1254,7 @@
                                         <div class="me-3 mb-0 circle margenL70">
                                             <!-- Icono "i" -->
                                             <i class="icon">
-                                                <a href="#">
+                                                <a href="{{ url('/detailCourses') }}">
                                                     <h1>i</h1>
                                                 </a>
                                             </i>

@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Estado extends Model
 {
-    public $timestamps = false;
     protected $table = 'estados';
     use HasFactory;
     public function ciudades(): HasMany
