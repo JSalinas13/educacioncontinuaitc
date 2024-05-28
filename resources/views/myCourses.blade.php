@@ -29,7 +29,7 @@
                             <h4 class="fa fa-star text-yellow"></h4>
                             <h4 class="fa fa-star text-yellow"></h4>
                         </div>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center"> <!-- Utiliza Flexbox para alinear en línea -->
                             <h6 class="me-3 mb-0">Progreso: </h6>
                             <h2 class="me-3 mb-0">25%</h2>
                             <div class="me-3 mb-0 circle margenL70">
