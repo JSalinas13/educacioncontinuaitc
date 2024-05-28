@@ -81,14 +81,17 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="row g-3">
                             <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                                <a class="position-relative d-block overflow-hidden" href="">
-                                    <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                                        style="margin: 1px;">
-                                        <h5 class="m-0">{{ Str::limit($categorias[0]->tipo_curso, 20) }}</h5>
-                                        <small class="text-primary">{{ $categorias[0]->total_cursos }} courses</small>
-                                    </div>
-                                </a>
+                                <form action="{{ route('categoryCourse') }}" method="POST" class="position-relative d-block overflow-hidden">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $categorias[0]->id }}">
+                                    <button type="submit" class="btn btn-link p-0 m-0" style="border: none; background: none; width: 100%; text-align: left;">
+                                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                            <h5 class="m-0">{{ Str::limit($categorias[0]->tipo_curso, 20) }}</h5>
+                                            <small class="text-primary">{{ $categorias[0]->total_cursos }} courses</small>
+                                        </div>
+                                    </button>
+                                </form>
                             </div>
 
                             @if (count($categorias) > 1)
@@ -133,7 +136,10 @@
                     </div>
                     @if (count($categorias) > 3)
                         <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                            <a class="position-relative d-block h-100 overflow-hidden" href="">
+                            <form action="{{ route('categoryCourse') }}" method="POST" class="position-relative d-block h-100 overflow-hidden">
+                                @csrf
+                                <button type="submit" class="btn btn-link p-0 m-0">
+                                <input type="hidden" name="id" value="{{ $categorias[3]->id }}">
                                 <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt=""
                                     style="object-fit: cover;">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
@@ -141,7 +147,8 @@
                                     <h5 class="m-0">{{ Str::limit($categorias[3]->tipo_curso, 20) }}</h5>
                                     <small class="text-primary">{{ $categorias[3]->total_cursos }} courses</small>
                                 </div>
-                            </a>
+                            </button>
+                            </form>
                         </div>
                     @endif
                 </div>
